@@ -1,0 +1,1 @@
+import {Router} from 'express';import {protect} from '../middleware/auth.js';import {listOpportunities,createOpportunity,updateOpportunity,deleteOpportunity} from '../controllers/crm.controller.js';const r=Router();r.use(protect);r.get('/',listOpportunities);r.post('/',createOpportunity);r.put('/:id',updateOpportunity);r.delete('/:id',deleteOpportunity);export default r;

@@ -1,0 +1,1 @@
+import {Router} from 'express';import {protect,allowRoles} from '../middleware/auth.js';import {listAudit} from '../controllers/crm.controller.js';const r=Router();r.use(protect,allowRoles('Admin','Manager'));r.get('/',listAudit);export default r;

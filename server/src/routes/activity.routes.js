@@ -1,0 +1,1 @@
+import {Router} from 'express';import {protect} from '../middleware/auth.js';import {listActivities,createActivity} from '../controllers/crm.controller.js';const r=Router();r.use(protect);r.get('/',listActivities);r.post('/',createActivity);export default r;

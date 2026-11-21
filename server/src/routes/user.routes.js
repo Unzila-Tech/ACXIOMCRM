@@ -1,0 +1,1 @@
+import {Router} from 'express';import {protect,allowRoles} from '../middleware/auth.js';import {listUsers,updateUser} from '../controllers/crm.controller.js';const r=Router();r.use(protect,allowRoles('Admin'));r.get('/',listUsers);r.patch('/:id',updateUser);export default r;

@@ -1,0 +1,2 @@
+import React from'react';import{Navigate}from'react-router-dom';import{useAuth}from'../context/AuthContext';
+export default function Protected({children,roles}){const{user,loading}=useAuth();if(loading)return <p className="p-4">Loading...</p>;if(!user)return <Navigate to="/login" replace/>;if(roles&&!roles.includes(user.role))return <div className="alert alert-danger m-4">You are not authorized to view this page.</div>;return children;}

@@ -1,0 +1,1 @@
+import {Router} from 'express';import {protect} from '../middleware/auth.js';import {report} from '../controllers/crm.controller.js';const r=Router();r.get('/:type',protect,report);export default r;

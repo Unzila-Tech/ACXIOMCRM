@@ -1,0 +1,1 @@
+import {Router} from 'express';import {protect} from '../middleware/auth.js';import {listLeads,createLead,updateLead,deleteLead,convertLead} from '../controllers/crm.controller.js';const r=Router();r.use(protect);r.get('/',listLeads);r.post('/',createLead);r.put('/:id',updateLead);r.delete('/:id',deleteLead);r.post('/:id/convert',convertLead);export default r;

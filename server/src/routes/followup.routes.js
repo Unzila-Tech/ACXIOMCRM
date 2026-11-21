@@ -1,0 +1,1 @@
+import {Router} from 'express';import {protect} from '../middleware/auth.js';import {listFollowups,createFollowup,updateFollowupStatus} from '../controllers/crm.controller.js';const r=Router();r.use(protect);r.get('/',listFollowups);r.post('/',createFollowup);r.patch('/:id/status',updateFollowupStatus);export default r;
