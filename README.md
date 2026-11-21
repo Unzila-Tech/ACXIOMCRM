@@ -1,0 +1,1 @@
+ACXIOMCRM is a web-based Customer Relationship Management (CRM) system designed to help businesses manage customers, leads, sales opportunities, follow-ups, and activities in one centralized platform.
